@@ -1,0 +1,95 @@
+{% include "header.html" %}
+
+
+    <!-- Page Header -->
+    <header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>My Portfolio Website</h1>
+            <span class="subheading">A collection of my projects.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </header>
+
+    <!-- Main Content -->
+
+    <div id="mainContent" class="container-fluid text-center">
+      <div class="row">
+        {% for project in all_projects %}
+        <div class="col-5 rounded-3 project-container">
+        <!-- КАРТИНКИ СДЕЛАТЬ НА ВСЮ ШИРИНУ РАМКИ, РАМКА РЕГУЛИРУЕТСЯ В СПАНЕ -->
+            <span style="height: 100px;"><img src={{ project.img_url }} width="100%" height="100%"></span>
+            <h2>{{ project.title }}</h2>
+            <h3>{{ project.description }}</h3>
+            <a href={{ project.github_link }}><i class="social-icon fa-brands fa-github fa-3x"></i></a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+{#    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="false">#}
+{#      <div class="carousel-indicators">#}
+{#        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>#}
+{#        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>#}
+{#        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>#}
+{#      </div>#}
+{#      <div class="carousel-inner">#}
+{#        <div class="carousel-item active container-fluid">#}
+{#          <div class="container-fluid">#}
+{#            <div class="row">#}
+{#              <div class="feature-box col-lg-4">#}
+{#                <i class="icon fa-solid fa-circle-check fa-4x"></i>#}
+{#                <h3 class="feature-title">Easy to use.</h3>#}
+{#                <p>So easy to use, even your dog could do it.</p>#}
+{#              </div>#}
+{##}
+{#              <div class="feature-box col-lg-4">#}
+{#                <i class="icon fa-solid fa-bullseye fa-4x"></i>#}
+{#                <h3 class="feature-title">Elite Clientele</h3>#}
+{#                <p>We have all the dogs, the greatest dogs.</p>#}
+{#              </div>#}
+{##}
+{#              <div class="feature-box col-lg-4">#}
+{#                <i class="icon fa-solid fa-heart fa-4x"></i>#}
+{#                <h3 class="feature-title">Guaranteed to work.</h3>#}
+{#                <p>Find the love of your dog's life or your money back.</p>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#            <div class="carousel-caption d-none d-md-block">#}
+{#                <h3>Python Scripting</h3>#}
+{#                <p>Some representative placeholder content for the first slide.</p>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="carousel-item container-fluid">#}
+{#            <h2>Hello</h2>#}
+{#            <img src="..." class="d-block w-100" alt="...">#}
+{#            <div class="carousel-caption d-none d-md-block">#}
+{#                <h3>GUI Projects</h3>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="carousel-item container-fluid">#}
+{#            <h2>Hello</h2>#}
+{#            <img src="..." class="d-block w-100" alt="...">#}
+{#            <div class="carousel-caption d-none d-md-block">#}
+{#                <h3>Web Developments</h3>#}
+{#            </div>#}
+{#        </div>#}
+{#      </div>#}
+{#      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">#}
+{#        <span class="carousel-control-prev-icon" aria-hidden="true"></span>#}
+{#        <span class="visually-hidden">Previous</span>#}
+{#      </button>#}
+{#      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">#}
+{#        <span class="carousel-control-next-icon" aria-hidden="true"></span>#}
+{#        <span class="visually-hidden">Next</span>#}
+{#      </button>#}
+{#    </div>#}
+
+
+{% include "footer.html" %}
